@@ -30,7 +30,7 @@ def summarize_text(llm, docs):
 
 
 def main():
-    st.title("Summarize My Sentences")
+    st.title("Text Summarization 🤗")
 
     with st.form(key="summarize_form"):
         input_text = st.text_area('Enter the text to summarize (minimum 600 characters):')

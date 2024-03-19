@@ -3,9 +3,9 @@
 ## Overview
 This project allows you to create summaries from text inputted via a form.
 
-Project screen:
+Intial project screen:
 ![Screenshot 2024-03-19 at 21 09 58](https://github.com/crypter70/Text-Summarization-using-LangChain-and-BART-Large-CNN/assets/74947224/715673b4-e1a5-4ec0-b82c-f9d1590e0d42)
-
+Project screen after results:
 ![Screenshot 2024-03-19 at 21 10 18](https://github.com/crypter70/Text-Summarization-using-LangChain-and-BART-Large-CNN/assets/74947224/542a073d-54f7-4f70-8e7a-0dfd0c0949eb)
 
 ## Installation

@@ -1,7 +1,7 @@
 # Text Summarization using LangChain and BART Large CNN
 
 ## Overview
-Project ini memungkinkan anda untuk membuat rangkuman dari teks yang di-input melalui form.
+This project allows you to create summaries from text inputted via a form.
 
 ## Installation
 1. Clone the repository
@@ -10,12 +10,22 @@ git clone https://github.com/crypter70/Text-Summarization-using-LangChain-and-BA
 ```
 
 2. Create a virtual environment
+```
+python -m venv env
+```
 
 3. Install the requirements
+```
+pip install -r requirements.txt
+```
 
-4. Add the HUGGINGFACEAPI KEY from huggingface account
+4. Add the HUGGINGFACEHUB_API_TOKEN from [HuggingFace](https://huggingface.co/settings/tokens)
+ to .env file
 
 5. Run the application
+```
+streamlit run App.py
+```
 
 
 

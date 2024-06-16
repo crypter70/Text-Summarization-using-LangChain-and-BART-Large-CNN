@@ -7,8 +7,7 @@ from dotenv import load_dotenv
 import streamlit as st
 # import os
 
-load_dotenv()
-
+# load_dotenv()
 
 repo_id = "facebook/bart-large-cnn"
 llm = HuggingFaceHub(

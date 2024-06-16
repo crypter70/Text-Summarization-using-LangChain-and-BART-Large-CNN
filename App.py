@@ -5,14 +5,17 @@ from langchain_community.llms import HuggingFaceHub
 from langchain_community.document_loaders import WebBaseLoader
 from dotenv import load_dotenv
 import streamlit as st
-
+import os
 
 load_dotenv()
+
+api_token = os.getenv("HUGGINGFACEHUB_API_TOKEN")
 
 repo_id = "facebook/bart-large-cnn"
 llm = HuggingFaceHub(
     repo_id=repo_id, 
-    model_kwargs={"temperature":0.5, "max_length":1000}, 
+    model_kwargs={"temperature":0.5, "max_length":1000},
+    huggingfacehub_api_token=api_token
 )
 text_splitter = CharacterTextSplitter()
 

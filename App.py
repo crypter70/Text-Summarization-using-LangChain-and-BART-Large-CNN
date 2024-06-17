@@ -32,9 +32,11 @@ def summarize_text(llm, docs):
 
 def main():
     st.title("Text Summarization 🤗")
+    st.markdown("""Language: English""")
+    st.markdown("""This app will summarize the long text of the entered text into several sentences.""")
 
     with st.form(key="summarize_form"):
-        input_text = st.text_area('Enter the text to summarize (minimum 600 characters):')
+        input_text = st.text_area('Input text (minimum 600 characters):')
         preprocessed_text = preprocessing_text(text_splitter, input_text)
 
         submitted = st.form_submit_button("Summarize")

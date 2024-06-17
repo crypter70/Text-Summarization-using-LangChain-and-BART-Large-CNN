@@ -48,6 +48,9 @@ def main():
             st.error("Please enter at least 600 characters of text.")
         elif not submitted and len(input_text) < 600:
             st.info("Minimum 600 characters of text required to summarize.")
+
+    st.markdown("---")
+    st.markdown("<div style='text-align: center;'>Powered by <a href='https://python.langchain.com/' target='_blank'>LangChain</a> and <a href='https://huggingface.co/facebook/bart-large-cnn' target='_blank'>BART Large CNN</a> </div>", unsafe_allow_html=True)
     
 
 if __name__ == "__main__":

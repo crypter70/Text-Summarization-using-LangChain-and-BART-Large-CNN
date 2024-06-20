@@ -3,18 +3,28 @@ from langchain.chains.summarize import load_summarize_chain
 from langchain.docstore.document import Document
 from langchain_community.llms import HuggingFaceHub
 from langchain_community.document_loaders import WebBaseLoader
-from dotenv import load_dotenv
 import streamlit as st
-# import os
 
-# load_dotenv()
 
 repo_id = "facebook/bart-large-cnn"
+
+# with streamlit cloud deployment
 llm = HuggingFaceHub(
     repo_id=repo_id, 
     model_kwargs={"temperature":0.5, "max_length":1000},
     huggingfacehub_api_token=st.secrets["api_token"]
 )
+
+# from dotenv import load_dotenv
+# load_dotenv()
+
+# without deployment
+# llm = HuggingFaceHub(
+#     repo_id=repo_id, 
+#     model_kwargs={"temperature":0.5, "max_length":1000},
+# )
+
+
 text_splitter = CharacterTextSplitter()
 
 
@@ -34,6 +44,7 @@ def main():
     st.title("Text Summarization 🤗")
     st.markdown("""Language: English""")
     st.markdown("""This app will summarize the long text of the entered text into several sentences.""")
+
 
     with st.form(key="summarize_form"):
         input_text = st.text_area('Input text (minimum 600 characters):')
